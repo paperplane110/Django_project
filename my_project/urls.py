@@ -4,7 +4,7 @@ version:
 Author: TianyuYuan
 Date: 2021-03-16 13:55:39
 LastEditors: TianyuYuan
-LastEditTime: 2021-03-18 17:58:20
+LastEditTime: 2021-03-19 14:23:52
 '''
 """my_project URL Configuration
 
@@ -30,6 +30,7 @@ from accounts import views as accounts_views
 urlpatterns = [
     re_path(r'^$', views.home, name='home'),
     re_path(r'^signup/$',accounts_views.signup, name='signup'),
+    re_path(r'^login/$',auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     re_path(r'^logout/$',auth_views.LogoutView.as_view(), name='logout'),
     re_path(r'^boards/(?P<pk>\d+)/$', views.board_topics,name="board_topics"),
     re_path(r'^boards/(?P<pk>\d+)/new/$', views.new_topic, name="new_topic"),
