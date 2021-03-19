@@ -4,14 +4,14 @@ version:
 Author: TianyuYuan
 Date: 2021-03-16 14:32:06
 LastEditors: TianyuYuan
-LastEditTime: 2021-03-18 11:14:28
+LastEditTime: 2021-03-19 14:59:51
 '''
 from django.contrib.auth.models import User
 from django.test import TestCase
 from django.urls import reverse,resolve
-from .views import home,board_topics,new_topic
-from .models import Board, Post, Topic
-from .forms import NewTopicForm
+from ..views import home,board_topics,new_topic
+from ..models import Board, Post, Topic
+from ..forms import NewTopicForm
 # Create your tests here.
 
 class HomeTest(TestCase):
